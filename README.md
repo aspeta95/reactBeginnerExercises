@@ -1,2 +1,2 @@
 # reactBeginnerExercises
-Just beginner exercises for preacticing
+Just beginner exercises for practicing

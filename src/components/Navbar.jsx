@@ -1,20 +1,37 @@
 import React from 'react'
+import { Link, Routes, Route} from 'react-router-dom'
+import Home from './Home'
+import About from './About'
+import Exercises from './Exercises'
 
 const Navbar = () => {
-  return (
+
+ 
+
+  return (<>
     <nav>
-        <a href='/' className='site-title'>
-            Site Name
-        </a>
+        <Link to='/' className='site-title'>
+            Home
+        </Link>
         <ul>
             <li>
-              <a href='/services'>Services</a>
+              <Link to='/exercises'>Exercises</Link>
             </li>
             <li>
-              <a href='/about'>About</a>
+              <Link to='/about'>About</Link>
             </li>
         </ul>
     </nav>
+
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/exercises' element={<Exercises />}>
+        <Route path=':id' element={<Exercises />}></Route>
+      </Route>
+      <Route path='/about' element={<About />} />
+    </Routes>
+
+  </>
   )
 }
 

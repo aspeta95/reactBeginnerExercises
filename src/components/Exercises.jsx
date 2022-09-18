@@ -7,7 +7,8 @@ const Exercises = () => {
 
   return (<>
     <h1>Exercise {id}</h1>
-    <Link to='' ></Link>
+    <Link to='exercises/calculator' >Calculator</Link>
+    <Link to='exercises/wordle' >Wordle</Link>
   </>
   )
 }

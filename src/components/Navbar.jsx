@@ -25,7 +25,8 @@ const Navbar = () => {
 
     <Routes>
       <Route path='/' element={<Home />} />
-      <Route path='/exercises' element={<Exercises />}>
+      <Route path='/exercises'>
+        <Route index element={<Exercises />} />
         <Route path=':id' element={<Exercises />}></Route>
       </Route>
       <Route path='/about' element={<About />} />
